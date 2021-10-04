@@ -9,3 +9,6 @@
 # @Description  :
 #
 """
+
+if __name__ == "__main__":
+    print("Test Username on commit")
