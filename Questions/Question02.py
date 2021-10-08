@@ -25,17 +25,38 @@ if __name__ == "__main__":
         none
     '''
 
-    Week1 = ["Joe", "John", "Jane", "Mick", "Mary", "Ann", "Rick", "John", "Aine", "Brenda"]  # List of players
-    Week1Numbers = []  # Empty List of numbers
+    week1 = ["Joe", "John", "Jane", "Mick", "Mary", "Ann", "Rick", "John", "Aine", "Brenda"]  # List of players
+    week1Numbers = []  # Empty List of numbers
 
     # Adding 10 random 10 numbers to list of numbers using loop
     for i in range(0, 10):
-        Week1Numbers.append(random.randint(0, 20))
+        week1Numbers.append(random.randint(0, 20))
 
-    LottoNumbers1 = {}  # Empty Dictionary
+    lottoNumbers1 = {}  # Empty Dictionary
+    # Adding Data to dictionary using loop
+    for i in range(0, 10):
+        lottoNumbers1[week1[i]] = week1Numbers[i]
 
-    Week2 = ["Jack", "Mary", "Phil", "John", "Pat", "Joe", "Luke", "Bill", "Ben", "Nathan"]
-    Week2Numbers = []  # Empty List of numbers
+    week2 = ["Jack", "Mary", "Phil", "John", "Pat", "Joe", "Luke", "Bill", "Ben", "Nathan"]
+    week2Numbers = []  # Empty List of numbers
     # Adding 10 random 10 numbers to list of numbers using loop
     for i in range(0, 10):
-        Week2Numbers.append(random.randint(0, 20))
+        week2Numbers.append(random.randint(0, 20))
+
+    lottoNumbers2 = {}  # Empty Dictionary
+    # Adding Data to dictionary using loop
+    for i in range(0, 10):
+        lottoNumbers2[week2[i]] = week2Numbers[i]
+
+    # Find the intersection in the lists to find out who bought tickets on both weeks
+    commonBuyers = []
+    for i in range(0, 10):
+        for j in range(0, 10):
+            if week1[i] == week2[j]:
+                commonBuyers.append(week1[i])
+
+    uniquePlayers = {}
+    # for i in range(0,10):  # Players in week 1
+    #     name, number = lottoNumbers1.popitem()
+
+    print(uniquePlayers)
